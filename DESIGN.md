@@ -57,14 +57,14 @@ classDiagram
     %% ASOCIACION
     Cliente "1" --> "1..*" Vehiculo : posee
 
+    %% ASOCIACION
+    Factura "1" --> "1..*" Reparacion : factura
+
     %% DEPENDENCIA
     Taller ..> Mecanico :usa
     Taller ..> Reparacion : gestiona
 
     %% REALIZACION (interfaz)
     Especialista <|-- Mecanico : implementa
-
-    %% ASOCIACION
-    Factura "1" --> "1..*" Reparacion : factura
 
 ```
