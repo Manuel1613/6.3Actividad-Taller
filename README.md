@@ -21,3 +21,7 @@ Se ha elegido **composición fuerte** porque una `Reparacion` no tiene sentido d
 ¿Qué ventaja tiene usar la interfaz Especialista?
 
 La interfaz `Especialista` permite **desacoplar** el concepto de "saber reparar" de una clase concreta. Gracias a ella, el `Taller` puede trabajar con cualquier tipo de especialista (no solo `Mecanico`) sin necesidad de cambiar su código, siguiendo el principio de programación orientada a interfaces. Esto facilita la extensibilidad: si en el futuro se añade un `Electricista` o un `Chapista`, simplemente implementan `Especialista` y el resto del sistema los acepta sin modificaciones.
+
+## FASE 4: Ingeniería Inversa
+
+
