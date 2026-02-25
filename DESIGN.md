@@ -40,20 +40,20 @@ classDiagram
     }
 
     %% HERENCIA
-    Vehiculo <|-- Coche
-    Vehiculo <|-- Moto
+    Vehiculo <|-- Coche : herencia
+    Vehiculo <|-- Moto : herencia
 
     %% COMPOSICION (vinculo fuerte)
-    Vehiculo "1" *-- "0..*" Reparacion
+    Vehiculo "1" *-- "0..*" Reparacion : contiene
 
     %% ASOCIACION
-    Cliente "1" --> "1..*" Vehiculo
+    Cliente "1" --> "1..*" Vehiculo : posee
 
     %% DEPENDENCIA
-    Taller ..> Mecanico
-    Taller ..> Reparacion
+    Taller ..> Mecanico :usa
+    Taller ..> Reparacion : gestiona
 
     %% REALIZACION (interfaz)
-    Especialista <|-- Mecanico
+    Especialista <|-- Mecanico : implementa
 
 ```
