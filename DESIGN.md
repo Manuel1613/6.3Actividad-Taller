@@ -26,7 +26,7 @@ classDiagram
     }
 
     class Especialista {
-        <<nterface>>
+        <<interface>>
         + reparar (Reparacion reparacion)
     }
 
@@ -49,11 +49,11 @@ classDiagram
     %% ASOCIACION
     Cliente "1" --> "1..*" Vehiculo
 
-    %% REALIZACION (interfaz)
-    Especialista <|-- Mecanico
-
     %% DEPENDENCIA
     Taller ..> Mecanico
     Taller ..> Reparacion
+
+    %% REALIZACION (interfaz)
+    Especialista <|-- Mecanico
 
 ```
