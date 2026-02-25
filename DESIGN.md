@@ -39,6 +39,14 @@ classDiagram
         + asignarReparacion (Reparacion reparacion, Mecanico mecanico) void
     }
 
+    class Factura {
+        - int numero
+        - Date fecha
+        - double total
+        - List~Reparacion~ reparaciones
+        + calcularTotal() double
+    }
+
     %% HERENCIA
     Vehiculo <|-- Coche : herencia
     Vehiculo <|-- Moto : herencia
@@ -55,5 +63,8 @@ classDiagram
 
     %% REALIZACION (interfaz)
     Especialista <|-- Mecanico : implementa
+
+    %% ASOCIACION
+    Factura "1" --> "1..*" Reparacion : factura
 
 ```
